@@ -1,18 +1,9 @@
-from typing import NamedTuple
-
 Identifier = object
-
-
-
 
 
 def make_node(*, id: Identifier, text: str, title: str, color: str, size: int):
     return {
-        'id': id,
-        'text': text,
-        'title': title,
-        'color': color,
-        'size': size
+        'id': id, 'text': text, 'title': title, 'color': color, 'size': size
     }
 
 

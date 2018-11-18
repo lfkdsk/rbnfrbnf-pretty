@@ -2,7 +2,7 @@ from rbnfrbnf.core.tokenizer import Token, lexing
 from rbnfrbnf.graph_runners.cfg.no_exc_handling import run_graph
 from rbnfrbnf.bootstrap.cfg import parse
 from rbnfrbnf.pgen import generate_parsing_graph_for_cfg
-from rbnfrbnf.syntax_graph import get_connected_nodes
+from rbnfrbnf.core.syntax_graph import get_connected_nodes
 from pprint import pprint
 from typing import List
 
@@ -28,5 +28,5 @@ pprint(tokens)
 pprint(run_graph(tokens, identified_nodes['Atom']))
 
 # use graphviz
-# plot_graphviz(get_connected_nodes(identified_nodes['Atom']), view=True)
-plot_d3(get_connected_nodes(identified_nodes['Atom']), view=True)
+plot_graphviz(get_connected_nodes(identified_nodes['Atom']), view=True)
+# plot_d3(get_connected_nodes(identified_nodes['Atom']), view=True, width=1500, height=1400)

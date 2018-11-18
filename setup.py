@@ -1,10 +1,9 @@
 from setuptools import setup, find_packages
-import rbnfrbnf
 readme = ""
 
 setup(
     name='rbnfrbnf-pretty',
-    version=rbnfrbnf.__version__,
+    version="0.1",
     keywords='plot, LR parser generator',
     description='the plotting utility providers for rbnfrbnf',
     long_description=readme,

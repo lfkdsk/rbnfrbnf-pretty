@@ -1,5 +1,5 @@
 from rbnfrbnf.core.syntax_graph import *
-from rbnfrbnf.utils import IdAllocator
+from rbnfrbnf.core.utils import IdAllocator
 from rbnfrbnf_pretty.d3.schema import *
 from typing import Iterable, Callable, Tuple, Optional
 from subprocess import check_call
@@ -13,7 +13,7 @@ class D3Style:
     def __init__(self):
         self.dispatchers = {
             NamedTerminal: lambda node: ('orange', repr(node), 6),
-            NonTerminalEnd: lambda node: ('blue', repr(node), 6),
+            NonTerminalEnd: lambda node: ('purple', repr(node), 5),
             UnnamedTerminal: lambda node: ('pink', repr(node), 7),
             SubRoutine: lambda node: ('teal', repr(node), 5),
             Identified: lambda node: ('red', repr(node), 6),
@@ -33,8 +33,8 @@ class D3Style:
 
 def plot_graph(nodes: Iterable[Node],
                d3_style: D3Style = None,
-               width=1200,
-               height=1000,
+               width=1500,
+               height=1400,
                view=False,
                port=8080):
     nodes = list(nodes)
